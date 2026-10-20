@@ -232,6 +232,19 @@ pip install -e .
 
 ## Usage Instructions
 
+### Local MRI Research Interface
+
+The Streamlit interface uses the saved `checkpoints/mri_resnet18/best_model.pth` checkpoint and reads
+the recorded evaluation values from `checkpoints/mri_resnet18/metrics.json`. From the repository root,
+install project dependencies with `pip install -r requirements.txt`, then launch the interface:
+
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+The interface accepts individual JPG, JPEG, PNG, BMP, and TIFF images up to 20 MB. Uploaded images are
+processed in memory and are not permanently saved. This research prototype is not a clinical diagnostic tool.
+
 ### Quick Start — Synthetic Data (No Real Data Needed)
 
 To verify the complete pipeline without ADNI/OASIS access:
